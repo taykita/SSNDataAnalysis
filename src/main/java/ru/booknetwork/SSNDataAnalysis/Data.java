@@ -1,15 +1,17 @@
 package ru.booknetwork.SSNDataAnalysis;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
+@Entity
 
 public class Data {
     public Data(String dataName, String action, String data) {
         this.dataName = dataName;
         this.action = action;
         this.data = data;
+    }
+
+    public Data() {
     }
 
     @Id

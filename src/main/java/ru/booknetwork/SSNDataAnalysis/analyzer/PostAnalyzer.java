@@ -22,7 +22,7 @@ public class PostAnalyzer implements Analyzer {
     @Override
     public void analysis(String message) throws Exception {
         String[] splitMessage = message.split("-");
-        Data data = new Data(splitMessage[0], splitMessage[1], splitMessage[2]);
+        Data data = new Data(splitMessage[0], splitMessage[1], splitMessage[2] + "-" + splitMessage[3]);
         dataRepository.addData(data);
     }
 }

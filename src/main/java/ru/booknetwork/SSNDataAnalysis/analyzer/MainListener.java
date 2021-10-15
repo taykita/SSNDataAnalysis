@@ -26,7 +26,7 @@ public class MainListener {
     }
 
     @KafkaListener(topics = "booknetwork-events", groupId = "booknetwork-consumer-group")
-    public void listenMessage(String message) {
+    public void listenMessage(String message) throws Exception {
         for (Analyzer analyzer: analyzerList) {
             if (equalsMessage(analyzer.getAnalyzerName(), message)) {
                 analyzer.analysis(message);

@@ -63,6 +63,7 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<excludes>
+					<exclude>hibernate.cfg.xml</exclude>
 					<exclude>application.properties</exclude>
 				</excludes>
 			</resource>
@@ -71,6 +72,7 @@
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
 				<includes>
+					<include>hibernate.cfg.xml</include>
 					<include>application.properties</include>
 				</includes>
 			</resource>
