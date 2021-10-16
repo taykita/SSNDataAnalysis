@@ -3,7 +3,6 @@ package ru.booknetwork.ssn.data.analysis;
 import javax.persistence.*;
 
 @Entity
-
 public class Data {
     public Data(String dataName, String action, String data) {
         this.dataName = dataName;

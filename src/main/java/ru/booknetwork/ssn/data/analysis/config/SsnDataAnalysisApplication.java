@@ -1,5 +1,6 @@
 package ru.booknetwork.ssn.data.analysis.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -22,6 +23,11 @@ public class SsnDataAnalysisApplication {
 	@Bean
 	public SessionFactory sessionFactory() {
 		return hibernateUtil.getSessionFactory();
+	}
+
+	@Bean
+	public ObjectMapper objectMapper() {
+		return new ObjectMapper();
 	}
 
 }

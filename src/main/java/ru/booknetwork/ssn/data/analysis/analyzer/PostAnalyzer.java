@@ -20,9 +20,10 @@ public class PostAnalyzer implements Analyzer {
     }
 
     @Override
-    public void analysis(String message) throws Exception {
-        String[] splitMessage = message.split("-");
-        Data data = new Data(splitMessage[0], splitMessage[1], splitMessage[2] + "-" + splitMessage[3]);
-        dataRepository.addData(data);
+    public void analysis(AnalysisDTO analysisDTO) throws Exception {
+        System.out.println(analysisDTO.toString());
+
+        //Data data = new Data(splitMessage[0], splitMessage[1], splitMessage[2] + "-" + splitMessage[3]);
+        //dataRepository.addData(data);
     }
 }
