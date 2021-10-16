@@ -1,4 +1,4 @@
-package ru.booknetwork.SSNDataAnalysis.analyzer;
+package ru.booknetwork.ssn.data.analysis.analyzer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -10,8 +10,11 @@ import java.util.List;
 @Service
 public class MainListener {
     @Autowired
-    public MainListener(Analyzer postAnalyzer) {
+    public MainListener(PostAnalyzer postAnalyzer, ChatAnalyzer chatAnalyzer,
+                        AccountAnalyzer accountAnalyzer ) {
         analyzerList.add(postAnalyzer);
+        analyzerList.add(chatAnalyzer);
+        analyzerList.add(accountAnalyzer);
     }
 
     private final List<Analyzer> analyzerList = new ArrayList<>();

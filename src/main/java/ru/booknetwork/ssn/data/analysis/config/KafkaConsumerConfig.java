@@ -1,4 +1,4 @@
-package ru.booknetwork.SSNDataAnalysis.config;
+package ru.booknetwork.ssn.data.analysis.config;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;

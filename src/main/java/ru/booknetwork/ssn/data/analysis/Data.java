@@ -1,4 +1,4 @@
-package ru.booknetwork.SSNDataAnalysis;
+package ru.booknetwork.ssn.data.analysis;
 
 import javax.persistence.*;
 

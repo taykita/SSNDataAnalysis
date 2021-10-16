@@ -1,4 +1,4 @@
-package ru.booknetwork.SSNDataAnalysis.config;
+package ru.booknetwork.ssn.data.analysis.config;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;

@@ -1,20 +1,21 @@
-package ru.booknetwork.SSNDataAnalysis.analyzer;
+package ru.booknetwork.ssn.data.analysis.analyzer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.booknetwork.SSNDataAnalysis.Data;
-import ru.booknetwork.SSNDataAnalysis.database.DataRepository;
+import ru.booknetwork.ssn.data.analysis.Data;
+import ru.booknetwork.ssn.data.analysis.database.DataRepository;
 
 @Service
-public class PostAnalyzer implements Analyzer {
+public class ChatAnalyzer implements Analyzer {
     @Autowired
-    public PostAnalyzer(DataRepository dataRepository) {
+    public ChatAnalyzer(DataRepository dataRepository) {
         this.dataRepository = dataRepository;
     }
 
     private final DataRepository dataRepository;
-    private final String analyzerName = "Post";
+    private final String analyzerName = "Chat";
 
+    @Override
     public String getAnalyzerName() {
         return analyzerName;
     }

@@ -24,7 +24,7 @@
         <property name="show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
-        <mapping class="ru.booknetwork.SSNDataAnalysis.Data"/>
+        <mapping class="ru.booknetwork.ssn.data.analysis.Data"/>
     </session-factory>
 
 </hibernate-configuration>
