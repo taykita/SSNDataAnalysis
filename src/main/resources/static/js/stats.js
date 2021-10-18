@@ -47,7 +47,6 @@ class Stats extends React.Component {
                 <div>
                     <h1>Создано аккаунтов - {statistic.accountsCreated}</h1>
                     <h1>Создано постов    - {statistic.postsCreated}</h1>
-                    <h1>Послано сообщений - {statistic.messagesSent}</h1>
                     <h1>Добавлено друзей  - {statistic.friendsAdded}</h1>
                 </div>
             );

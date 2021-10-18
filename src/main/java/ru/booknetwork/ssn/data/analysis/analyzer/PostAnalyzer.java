@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import ru.booknetwork.ssn.data.analysis.Data;
 import ru.booknetwork.ssn.data.analysis.database.DataRepository;
 
+import java.util.LinkedHashMap;
+
 @Service
 public class PostAnalyzer implements Analyzer {
     @Autowired
@@ -23,7 +25,9 @@ public class PostAnalyzer implements Analyzer {
     public void analysis(AnalysisDTO analysisDTO) throws Exception {
         System.out.println(analysisDTO.toString());
 
-        //Data data = new Data(splitMessage[0], splitMessage[1], splitMessage[2] + "-" + splitMessage[3]);
-        //dataRepository.addData(data);
+        LinkedHashMap analysisDTOData = (LinkedHashMap) analysisDTO.getData();
+
+        Data data = new Data(analysisDTO.getName(), analysisDTO.getAction(),  analysisDTOData.get("id") + "=" + analysisDTOData.get("text"));
+        dataRepository.addData(data);
     }
 }

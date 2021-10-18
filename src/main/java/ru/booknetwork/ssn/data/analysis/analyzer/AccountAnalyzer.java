@@ -22,7 +22,7 @@ public class AccountAnalyzer implements Analyzer {
 
     @Override
     public void analysis(AnalysisDTO analysisDTO) throws Exception {
-//        Data data = new Data(splitMessage[0], splitMessage[1], splitMessage[2] + "-" + splitMessage[3]);
-//        dataRepository.addData(data);
+        Data data = new Data(analysisDTO.getName(), analysisDTO.getAction(), (String) analysisDTO.getData());
+        dataRepository.addData(data);
     }
 }

@@ -44,7 +44,7 @@ public class HibernateDataRepository implements DataRepository {
             StatisticDTO statisticDTO = new StatisticDTO();
 
             Long accountsCreated = (Long) session.createSQLQuery
-                    ("SELECT COUNT(data_name) FROM Data WHERE data_name='Account' AND action='created'")
+                    ("SELECT COUNT(data_name) FROM Data WHERE data_name='Account' AND action='Created'")
                     .addScalar("count", LongType.INSTANCE)
                     .getSingleResult();
             statisticDTO.setAccountsCreated(accountsCreated.intValue());
@@ -62,7 +62,7 @@ public class HibernateDataRepository implements DataRepository {
             statisticDTO.setMessagesSent(messagesSent.intValue());
 
             Long friendsAdded = (Long) session.createSQLQuery
-                    ("SELECT COUNT(data_name) FROM Data WHERE data_name='Post' AND action='friendAdded'")
+                    ("SELECT COUNT(data_name) FROM Data WHERE data_name='Account' AND action='FriendAdded'")
                     .addScalar("count", LongType.INSTANCE)
                     .getSingleResult();
             statisticDTO.setFriendsAdded(friendsAdded.intValue());
